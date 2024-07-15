@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Keyboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.key-row {
+    display: flex;
+}
+
+.key, .key-space {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.key-space {
+    width: 200px;
+}
+
+textarea {
+    margin-top: 20px;
+    font-size: 16px;
+    padding: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="keyboard">
+        <div class="key-row">
+            <button class="key">Esc</button>
+            <button class="key">F1</button>
+            <button class="key">F2</button>
+            <button class="key">F3</button>
+            <button class="key">F4</button>
+            <button class="key">F5</button>
+            <button class="key">F6</button>
+            <button class="key">F7</button>
+            <button class="key">F8</button>
+            <button class="key">F9</button>
+            <button class="key">F10</button>
+            <button class="key">F11</button>
+            <button class="key">F12</button>
+            <button class="key">Insert</button>
+            <button class="key">PrtSc</button>
+            <button class="key">Delete</button>
+        </div>
+        <div class="key-row">
+            <button class="key">~</button>
+            <button class="key">1</button>
+            <button class="key">2</button>
+            <button class="key">3</button>
+            <button class="key">4</button>
+            <button class="key">5</button>
+            <button class="key">6</button>
+            <button class="key">7</button>
+            <button class="key">8</button>
+            <button class="key">9</button>
+            <button class="key">0</button>
+            <button class="key">-</button>
+            <button class="key">=</button>
+            <button class="key">Backspace</button>
+        </div>
+        <div class="key-row">
+            <button class="key">Tab</button>
+            <button class="key">Q</button>
+            <button class="key">W</button>
+            <button class="key">E</button>
+            <button class="key">R</button>
+            <button class="key">T</button>
+            <button class="key">Y</button>
+            <button class="key">U</button>
+            <button class="key">I</button>
+            <button class="key">O</button>
+            <button class="key">P</button>
+            <button class="key">[</button>
+            <button class="key">]</button>
+            <button class="key">\</button>
+        </div>
+        <div class="key-row">
+            <button class="key">CapsLK</button>
+            <button class="key">A</button>
+            <button class="key">S</button>
+            <button class="key">D</button>
+            <button class="key">F</button>
+            <button class="key">G</button>
+            <button class="key">H</button>
+            <button class="key">J</button>
+            <button class="key">K</button>
+            <button class="key">L</button>
+            <button class="key">;</button>
+            <button class="key">'</button>
+            <button class="key-enter">Enter</button>
+        </div>
+        <div class="key-row">
+            <button class="key">Shift</button>
+            <button class="key">Z</button>
+            <button class="key">X</button>
+            <button class="key">C</button>
+            <button class="key">V</button>
+            <button class="key">B</button>
+            <button class="key">N</button>
+            <button class="key">M</button>
+            <button class="key"><</button>
+            <button class="key">></button>
+            <button class="key">/</button>
+            <button class="key">Shift</button>
+        </div>
+        <div class="key-row">
+            <button class="key">Ctrl</button>
+            <button class="key">Fn</button>
+            <button class="key">Windows</button>
+            <button class="key">Alt</button>
+            <button class="key-space">Space</button>
+            <button class="key">AltGr</button>
+            <button class="key">Ctrl</button>
+        </div>
+    </div>
+    <textarea id="output" rows="4" cols="50"></textarea>
+
+    <script>
+        document.querySelectorAll('.key').forEach(key => {
+    key.addEventListener('click', () => {
+        const output = document.getElementById('output');
+        output.value += key.textContent;
+    });
+});
+
+document.querySelector('.key-space').addEventListener('click', () => {
+    const output = document.getElementById('output');
+    output.value += ' ';
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Flex</title>
+        <style>
+            .flex{
+                 display: flex;
+                 align-items: flex-start;
+                 flex-wrap: wrap;
+                 flex-direction: column;
+                 justify-content: left;
+        }
+        p{
+          background-color: rgb(55, 238, 39);
+          color: rgb(13, 13, 13);
+          padding: 15px;
+        }
+        .f1{
+            align-self: center55;
+            font-weight: bold;
+            text-transform: uppercase;
+            flex-shrink: 1;
+            flex-grow: 3;
+        }
+        .f2{
+            align-self: flex-end;
+            font-weight: bold;
+            text-transform: uppercase;
+            flex-shrink: 1;
+            flex-grow: 4;
+        }
+        .f3{
+            align-self: first baseline;
+            font-weight: bold;
+            text-transform: uppercase;
+            flex-shrink: 1;
+            flex-grow: 5;
+        }
+        .f4{
+            align-self: center;
+            font-weight: bold;
+            text-transform: uppercase;
+            flex-shrink: 1;
+            flex-grow: 3;
+                }
+        </style>
+    </head>
+    <body>
+        <div class="flex">
+            <p class="f1">Lorem ipsum dolor sit amet.</p>
+            <p class="f2">Lorem ipsum dolor sit amet consectetur.</p>
+            <p class="f3">Lorem ipsum dolor sit amet consectetur.</p>
+            <p class="f4">Lorem ipsum dolor sit, amet consectetur.</p>
+        </div>
+    </body>
+</html>
